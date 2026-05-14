@@ -1,0 +1,740 @@
+{
+  "info": {
+    "_postman_id": "61b12dbb-47a1-4b43-a4d5-6eba19275b7e",
+    "name": "Applied Training",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14691148"
+  },
+  "item": [
+    {
+      "name": "Get Service Document",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Service metadata",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/$metadata",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "$metadata"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Product Data",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/ProductSet('HT-1010')?$format=json",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "ProductSet('HT-1010')"
+          ],
+          "query": [
+            {
+              "key": "$format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single Product Data",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/ProductSet('HT-1010')?$format=json&$expand=To_Supplier",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "ProductSet('HT-1010')"
+          ],
+          "query": [
+            {
+              "key": "$format",
+              "value": "json"
+            },
+            {
+              "key": "$expand",
+              "value": "To_Supplier"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Product Image",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/ProductImgSet('HT-1011')/$value",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "ProductImgSet('HT-1011')",
+            "$value"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET All BP",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/SupplierSet?$format=json",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "SupplierSet"
+          ],
+          "query": [
+            {
+              "key": "$format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET All Orders",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/SalesOrderSet?$format=json&$top=1",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "SalesOrderSet"
+          ],
+          "query": [
+            {
+              "key": "$format",
+              "value": "json"
+            },
+            {
+              "key": "$top",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Single Order Data",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/SalesOrderSet('500000001')?$format=json&$expand=To_Items",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "SalesOrderSet('500000001')"
+          ],
+          "query": [
+            {
+              "key": "$format",
+              "value": "json"
+            },
+            {
+              "key": "$expand",
+              "value": "To_Items"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get the Most Expensive product",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/GetMostExpensiveProduct",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "GetMostExpensiveProduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Batch insert data to create order and items",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "AmwMavxWpwxkZfkf8h2img==",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"CreatedBy\": \"400000038\",\r\n        \"Note\": \"EPM DG: SO ID 0500000001 Deliver as fast as possible\",\r\n        \"BuyerId\": \"100000002\",\r\n        \"BuyerName\": \"DelBont Industries\",\r\n        \"CurrencyCode\": \"EUR\",\r\n        \"GrossAmount\": \"14602.49\",\r\n        \"LifecycleStatus\": \"N\",\r\n        \"To_Items\":  [\r\n                {\r\n                    \"SoItemPos\": \"10\",\r\n                    \"ProductId\": \"HT-1030\",\r\n                    \"Note\": \"EPM DG: SO ID 0500000001 Item 0000000010\",\r\n                    \"CurrencyCode\": \"EUR\",\r\n                    \"GrossAmount\": \"547.40\",\r\n                    \"Quantity\": \"2\",\r\n                    \"QuantityUnit\": \"EA\"\r\n                },\r\n                {\r\n                    \"SoItemPos\": \"20\",\r\n                    \"ProductId\": \"HT-1031\",\r\n                    \"Note\": \"EPM DG: SO ID 0500000001 Item 0000000020\",\r\n                    \"CurrencyCode\": \"GBP\",\r\n                    \"GrossAmount\": \"339.15\",\r\n                    \"Quantity\": \"1\",\r\n                    \"QuantityUnit\": \"EA\"\r\n                }\r\n            ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/SalesOrderSet",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "SalesOrderSet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Single Supplier",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "fetch",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/SupplierSet('0100000002')?$format=json",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "SupplierSet('0100000002')"
+          ],
+          "query": [
+            {
+              "key": "$format",
+              "value": "json"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Product Data Copy",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "wog_9ync47R2bBVvHjR5Fw==",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"PRODUCT_ID\": \"AM-2020\",\r\n        \"TYPE_CODE\": \"PR\",\r\n        \"CATEGORY\": \"Notebooks\",\r\n        \"NAME\": \"AM 321225 Advance chip manc.\",\r\n        \"DESCRIPTION\": \"Applied material supersonic laptop\",\r\n        \"SUPPLIER_ID\": \"0100000051\",\r\n        \"SUPPLIER_NAME\": \"TECUM\",\r\n        \"TAX_TARIF_CODE\": \"1 \",\r\n        \"MEASURE_UNIT\": \"EA\",\r\n        \"PRICE\": \"1999.0000\",\r\n        \"CURRENCY_CODE\": \"EUR\",\r\n        \"DIM_UNIT\": \"CM\",\r\n        \"PRODUCT_PIC_URL\": \"/sap/public/bc/NWDEMO_MODEL/IMAGES/AM-1010.jpg\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/ProductSet",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "ProductSet"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update call",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "Y7n80m9w_M3o8CD25vqroA==",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"PRODUCT_ID\": \"AM-2020\",\r\n        \"PRICE\": \"5555\",\r\n        \"CURRENCY_CODE\": \"USD\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/ProductSet('AM-2020')",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "ProductSet('AM-2020')"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Call",
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "password",
+              "value": "",
+              "type": "string"
+            },
+            {
+              "key": "username",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "x-csrf-token",
+            "value": "Y7n80m9w_M3o8CD25vqroA==",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"PRODUCT_ID\": \"AM-2020\",\r\n        \"PRICE\": \"5555\",\r\n        \"CURRENCY_CODE\": \"USD\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://s4hana10.saraswatitechnologies.in:8010/sap/opu/odata/sap/ZAM_AB_SRV/ProductSet('AM-2020')",
+          "protocol": "http",
+          "host": [
+            "s4hana10",
+            "saraswatitechnologies",
+            "in"
+          ],
+          "port": "8010",
+          "path": [
+            "sap",
+            "opu",
+            "odata",
+            "sap",
+            "ZAM_AB_SRV",
+            "ProductSet('AM-2020')"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
